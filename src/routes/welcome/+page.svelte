@@ -1,20 +1,8 @@
 <script lang="ts">
-  const logo = "logo.png";
-
   import { Github, Linkedin } from "@lucide/svelte";
 </script>
 
-<header>
-  <img id="header-logo" src={logo} alt="" />
-  <nav id="navigation-section">
-    <ul>
-      <li>Blog</li>
-      <li>Projects</li>
-      <li>Contact</li>
-    </ul>
-  </nav>
-</header>
-<section id="main">
+<main id="main">
   <div id="main-section-left" class="main-section-segment">
     <div id="bio-section">
       <h2>Full Stack</h2>
@@ -31,7 +19,7 @@
     </div>
   </div>
   <div id="main-section-right" class="main-section-segment"></div>
-</section>
+</main>
 
 <style>
   :global(body) {
@@ -45,6 +33,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
   }
 
   :global(img) {
@@ -64,36 +54,15 @@
     color: #fff;
   }
 
-  header {
-    width: 80%;
-    display: flex;
-
-    align-items: center;
-  }
-
-  header img {
-    width: 150px;
-  }
-
-  #navigation-section ul {
-    display: flex;
-    font-family: "Inconsolata";
-  }
-
-  #navigation-section li {
-    font-size: 2rem;
-    margin-right: 1em;
-    color: #fff;
-  }
-
-  #navigation-section li:hover {
-    text-decoration: underline;
-  }
-
   #main {
     width: 80%;
     height: 800px;
     display: flex;
+  }
+
+  .main-section-segment {
+    width: 50%;
+    height: 100%;
   }
 
   #main-section-left {
@@ -101,6 +70,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  #main-section-right {
+    background-image: url("images/giblie-me.png");
+    background-size: cover;
   }
 
   #bio-section {
@@ -122,13 +96,5 @@
     margin: 0 0 15px 0;
   }
 
-  #main-section-right {
-    background-image: url("images/giblie-me.png");
-    background-size: cover;
-  }
-
-  .main-section-segment {
-    width: 50%;
-    height: 100%;
-  }
+  
 </style>
