@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Github, Linkedin } from "@lucide/svelte";
+  import giblieMe from "../../../static/images/giblie-me.png";
 </script>
 
 <main id="main">
@@ -18,7 +19,9 @@
       </span>
     </div>
   </div>
-  <div id="main-section-right" class="main-section-segment"></div>
+  <div id="main-section-right" class="main-section-segment">
+    <div id="photo-container"></div>
+  </div>
 </main>
 
 <style>
@@ -73,10 +76,17 @@
   }
 
   #main-section-right {
-    background-image: url("images/giblie-me.png");
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
+  #photo-container {
+    height: 400px;
+    width: 400px;
+    background-image: url("/static/images/giblie-me.png");
+    background-size: cover;
+  }
   #bio-section {
     width: 50%;
   }
@@ -95,6 +105,4 @@
     font-weight: 600;
     margin: 0 0 15px 0;
   }
-
-  
 </style>
