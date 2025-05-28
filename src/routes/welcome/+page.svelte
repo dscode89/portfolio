@@ -54,7 +54,6 @@
 
   .icon:hover {
     cursor: pointer;
-    color: #fff;
   }
 
   #main {
@@ -89,6 +88,8 @@
   }
   #bio-section {
     width: 50%;
+    animation-duration: 1s;
+    animation-name: slide-in;
   }
 
   #bio-section h2 {
@@ -104,5 +105,19 @@
     color: #f8bfe7;
     font-weight: 600;
     margin: 0 0 15px 0;
+  }
+
+  @keyframes slide-in {
+    from {
+      translate: -20vw 0;
+      scale: 150% 1;
+      opacity: 0;
+    }
+
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+      opacity: 1;
+    }
   }
 </style>

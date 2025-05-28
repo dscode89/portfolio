@@ -54,7 +54,7 @@
   }
 
   #form-heading {
-    color: pink;
+    color: #a57992;
     font-family: "Poetsen One", sans-serif;
     font-size: 4rem;
   }
@@ -69,11 +69,13 @@
     background-color: #27262c;
     border-radius: 15px;
     font-family: Inconsolata;
+    animation-duration: 1s;
+    animation-name: slide-in;
   }
   label,
   input,
   textarea {
-    color: pink;
+    color: #fff;
     font-size: 1.2rem;
     width: 70%;
     padding: 0.2em;
@@ -82,7 +84,7 @@
   input,
   textarea {
     background-color: #27262c;
-    border: 4px solid pink;
+    border: 4px solid #a57992;
   }
 
   label {
@@ -109,5 +111,19 @@
   #submit-btn:hover {
     cursor: pointer;
     background-color: #333236;
+  }
+
+  @keyframes slide-in {
+    from {
+      translate: -20vw 0;
+      scale: 150% 1;
+      opacity: 0;
+    }
+
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+      opacity: 1;
+    }
   }
 </style>
